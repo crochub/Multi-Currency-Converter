@@ -1,0 +1,6 @@
+<mat-card class="currency-converter-panel mat-elevation-z4">
+  <mc-currency-converter (addConversion)="onAdd($event)"></mc-currency-converter>
+</mat-card>
+<mat-card class="conversion-list-panel mat-elevation-z4">
+  <mc-conversion-list [conversions]="conversions"></mc-conversion-list>
+</mat-card>

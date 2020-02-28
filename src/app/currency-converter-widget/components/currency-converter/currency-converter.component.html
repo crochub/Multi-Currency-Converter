@@ -1,0 +1,21 @@
+<form [formGroup]="monetaryFormGroup" (ngSubmit)="add()">
+  <div class="controls-container">
+    <mat-form-field class="amount-control" appearance="outline">
+      <input type="text" formControlName="amount" matInput mcAmountMask maxlength="8" autocomplete="off">
+      <mat-hint>{{ conversion | convertCurrency }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field class="currency-control" appearance="outline">
+      <mat-select formControlName="currency">
+        <mat-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency.name }} => 1 {{ base }} - {{ currency.rate | currency:'':'':'0.0-2' }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button type="submit" class="add-button" mat-raised-button color="primary" [disabled]="!conversion">
+      Add
+    </button>
+  </div>
+</form>

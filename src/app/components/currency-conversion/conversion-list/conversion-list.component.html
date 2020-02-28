@@ -1,0 +1,19 @@
+<div class="conversions-container">
+  <mat-list role="list">
+    <ng-container *ngFor="let conversion of conversions">
+      <mat-list-item role="listitem">
+        <div class="conversion-item-wrapper">
+          <p>{{ conversion.amount }} {{ conversion.sourceCurrency.name }}</p>
+          <p>{{ conversion | convertCurrency }}</p>
+        </div>
+      </mat-list-item>
+      <mat-divider [inset]="true"></mat-divider>
+    </ng-container>
+  </mat-list>
+</div>
+
+<mat-divider [inset]="true"></mat-divider>
+<div class="summary-block">
+  <strong>Count: {{ conversions.length }}</strong>
+  <strong>{{ conversationSum }} USD</strong>
+</div>

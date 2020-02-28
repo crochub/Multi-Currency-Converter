@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.conversions-container {
+  padding: 0 15px;
+  flex-grow: 1;
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.summary-block {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  padding: 15px 0;
+  text-align: right;
+}
+
+.conversion-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+   width: 100%;
+}
